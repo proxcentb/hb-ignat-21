@@ -1,19 +1,25 @@
+import pepelaugh from './pepelaugh.png';
+
+document.querySelector('.message button').addEventListener('click', onOk)
+document.querySelector('.box').addEventListener('click', onBoxClick)
+
 function onOk() {
     const message = document.querySelector('.message');
     message.classList.add('hide');
-    console.log(message)
     loopBruh()
     playVika()
 }
 
 function onBoxClick() {
     const img = document.querySelector('.box .img')
+    const pepe = document.getElementById('feels-amazing-man')
     const lid = document.querySelector('.box .box-lid');
     const vika = document.getElementById('vika')
     const amogus = document.getElementById('amogus')
 
     img.classList.add('img-animate');
     lid.classList.add('lid-animate');
+    pepe.src = pepelaugh;
 
     vika.volume = 0.2;
     setTimeout(() => vika.volume = 1, 2000);
