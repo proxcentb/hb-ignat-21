@@ -25,6 +25,11 @@ function playBruh() {
     }, rand);
 }());
 
+(function playVika() {
+    const vika = document.getElementById('vika')
+    vika.play()
+}())
+
 (function() {
     var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, resizeWindow, xpos;
     NUM_CONFETTI = 850;
