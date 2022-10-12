@@ -196,7 +196,7 @@ h1 {
     text-transform: uppercase;
     animation: blur 0.8s ease-in-out infinite;
     text-shadow: 0px 0px 15px blue, 0px 0px 7px pink;
-    color: rgb(220, 220, 255);
+    color: rgb(240, 240, 255);
   }
   
   @keyframes blur {
@@ -224,11 +224,26 @@ h1 {
     }
   }
   
-  #vika {
-    position: absolute;
+  .message {
     width: 100vw;
-    height: 20px;
-    bottom: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    background-color: black;
+  }
+
+  .message button {
+    font-size: 7vw;
+  }
+
+  .hide {
+    transition: 1.5s;
+    opacity: 0;
+    pointer-events: none;
   }
 
   .mobile {

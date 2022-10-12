@@ -1,4 +1,12 @@
-async function onBoxClick() {
+function onOk() {
+    const message = document.querySelector('.message');
+    message.classList.add('hide');
+    console.log(message)
+    loopBruh()
+    playVika()
+}
+
+function onBoxClick() {
     const img = document.querySelector('.box .img')
     const lid = document.querySelector('.box .box-lid');
     const vika = document.getElementById('vika')
@@ -7,7 +15,7 @@ async function onBoxClick() {
     img.classList.add('img-animate');
     lid.classList.add('lid-animate');
 
-    vika.volume = 0.3;
+    vika.volume = 0.2;
     setTimeout(() => vika.volume = 1, 2000);
     setTimeout(() => amogus.play(), 500);
 }
@@ -17,18 +25,18 @@ function playBruh() {
     bruh.play()
 }
 
-(function loopBruh() {
-    let rand = Math.round(Math.random() * 10000) + 2000;
+function loopBruh() {
+    let rand = Math.round(Math.random() * 15000) + 3000;
     setTimeout(() => {
         playBruh();
         loopBruh();
     }, rand);
-}());
+};
 
-(function playVika() {
+function playVika() {
     const vika = document.getElementById('vika')
     vika.play()
-}())
+}
 
 (function() {
     var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, resizeWindow, xpos;
