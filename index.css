@@ -38,7 +38,7 @@ h1 {
     rotate: 20deg;
     animation-name: rotate-1;
     animation-timing-function: steps(2, jump-none);
-    animation-duration: 2s;
+    animation-duration: 1.7s;
     animation-iteration-count: infinite;
 }
 
@@ -51,7 +51,7 @@ h1 {
     rotate: -10deg;
     animation-name: rotate-2;
     animation-timing-function: steps(2, jump-none);
-    animation-duration: 2s;
+    animation-duration: 1.7s;
     animation-iteration-count: infinite;
 }
 

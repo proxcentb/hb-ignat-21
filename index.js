@@ -32,7 +32,7 @@ function playBruh() {
 }
 
 function loopBruh() {
-    let rand = Math.round(Math.random() * 15000) + 3000;
+    let rand = Math.round(Math.random() * 15000) + 4000;
     setTimeout(() => {
         playBruh();
         loopBruh();
@@ -46,8 +46,8 @@ function playVika() {
 
 (function() {
     var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, resizeWindow, xpos;
-    NUM_CONFETTI = 850;
-    COLORS = [[85, 71, 106], [174, 61, 99], [219, 56, 83], [244, 92, 68], [248, 182, 70]];
+    NUM_CONFETTI = 300;
+    COLORS = [[85, 71, 106], [174, 61, 99], [219, 56, 83], [244, 92, 68], [248, 182, 70], [100, 232, 70]];
     PI_2 = 2 * Math.PI;
     canvas = document.getElementById("world");
     context = canvas.getContext("2d");
@@ -76,12 +76,12 @@ function playVika() {
     };
     window.requestAnimationFrame = (function() {
       return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
-        return window.setTimeout(callback, 1000 / 60);
+        return window.setTimeout(callback, 1000 / 30);
       };
     })();
     Confetti = (function() {
       function Confetti() {
-        this.style = COLORS[~~range(0, 5)];
+        this.style = COLORS[~~range(0, 6)];
         this.rgb = "rgba(" + this.style[0] + "," + this.style[1] + "," + this.style[2];
         this.r = ~~range(3, 8);
         this.r2 = 2 * this.r;
@@ -89,25 +89,21 @@ function playVika() {
       }
   
       Confetti.prototype.replace = function() {
-        this.opacity = 0;
-        this.dop = 0.03 * range(1, 4);
+        this.opacity = 1;
+        this.dop = 0.001 * range(1, 4);
         this.x = range(-this.r2, w - this.r2);
-        this.y = range(-20, h - this.r2);
+        this.y = 0;
         this.xmax = w - this.r;
         this.ymax = h - this.r;
-        this.vx = (range(0, 2) + 8 * xpos - 5) / 3;
-        return this.vy = 0.3 * this.r + range(-1, 1);
+        this.vx = range(0, 2) + 8 * xpos - 5;
+        return this.vy = 0.4 * this.r + range(-1, 3);
       };
   
       Confetti.prototype.draw = function() {
         var _ref;
         this.x += this.vx;
         this.y += this.vy;
-        this.opacity += this.dop;
-        if (this.opacity > 1) {
-          this.opacity = 1;
-          this.dop *= -1;
-        }
+        this.opacity -= this.dop;
         if (this.opacity < 0 || this.y > this.ymax) {
           this.replace();
         }
