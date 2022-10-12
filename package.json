@@ -2,7 +2,7 @@
     "scripts": {
       "start": "parcel index.html --open",
       "prebuild": "shx rm -rf dist/*",
-      "build": "parcel build ./src/index.html --public-url ./",
+      "build": "parcel build ./index.html --public-url ./",
       "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
     },
     "devDependencies": {
