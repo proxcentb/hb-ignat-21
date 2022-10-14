@@ -51,7 +51,7 @@ function playVika() {
     PI_2 = 2 * Math.PI;
     canvas = document.getElementById("world");
     context = canvas.getContext("2d");
-    window.w = canvas.width = window.innerWidt
+    window.w = canvas.width = window.innerWidth
     window.h = canvas.height = window.innerHeight;
     resizeWindow = function() {
       window.w = canvas.width = window.innerWidth;
@@ -69,10 +69,6 @@ function playVika() {
       context.arc(x, y, r, 0, PI_2, false);
       context.fillStyle = style;
       return context.fill();
-    };
-    xpos = 0.5;
-    document.onmousemove = function(e) {
-      return xpos = e.pageX / w;
     };
     window.requestAnimationFrame = (function() {
       return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
@@ -95,8 +91,8 @@ function playVika() {
         this.y = 0;
         this.xmax = w - this.r;
         this.ymax = h - this.r;
-        this.vx = range(0, 2) + 8 * xpos - 5;
-        return this.vy = 0.4 * this.r + range(-1, 3);
+        this.vx = range(-1, 1);
+        this.vy = 0.4 * this.r + range(-1, 3);
       };
   
       Confetti.prototype.draw = function() {
