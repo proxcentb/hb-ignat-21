@@ -51,8 +51,8 @@ function playVika() {
     PI_2 = 2 * Math.PI;
     canvas = document.getElementById("world");
     context = canvas.getContext("2d");
-    window.w = 0;
-    window.h = 0;
+    window.w = canvas.width;
+    window.h = canvas.height;
     resizeWindow = function() {
       window.w = canvas.width = window.innerWidth;
       return window.h = canvas.height = window.innerHeight;
