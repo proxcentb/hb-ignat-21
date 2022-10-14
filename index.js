@@ -19,11 +19,11 @@ function onBoxClick() {
 
     img.classList.add('img-animate');
     lid.classList.add('lid-animate');
-    pepe.src = pepelaugh;
 
     vika.volume = 0.2;
-    setTimeout(() => vika.volume = 1, 2000);
-    setTimeout(() => amogus.play(), 500);
+    setTimeout(() => vika.volume = 1, 2200);
+    setTimeout(() => amogus.play(), 600);
+    setTimeout(() => pepe.src = pepelaugh, 1700);
 }
 
 function playBruh() {
@@ -32,7 +32,7 @@ function playBruh() {
 }
 
 function loopBruh() {
-    let rand = Math.round(Math.random() * 15000) + 4000;
+    let rand = Math.round(Math.random() * 25000) + 5000;
     setTimeout(() => {
         playBruh();
         loopBruh();

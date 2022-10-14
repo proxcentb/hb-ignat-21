@@ -25,7 +25,7 @@ h1 {
     bottom: 5vh;
     margin: 0;
     z-index: 4;
-    font-size: 7vw;
+    font-size: 5vw;
     font-family: "sans-serif";
 }
 
@@ -104,19 +104,11 @@ h1 {
 }
 
 .img {
-    width: 11vw;
-    height: 11vw;
+    width: 13vw;
+    height: 13vw;
     align-self: flex-end;
     position: absolute;
     z-index: 1;
-}
-
-#abobus {
-    left: -3vw;
-}
-
-#mf {
-    right: -4vw;
 }
 
 .box-lid {
@@ -168,7 +160,7 @@ h1 {
 
 
 .img-animate {
-    transform: translateY(-150%);
+    transform: translateY(-100%);
     transition: 1s;
     transition-delay: 0.5s;
 }
@@ -190,7 +182,7 @@ h1 {
   
 .area {
     text-align: center;
-    font-size: 6.5em;
+    font-size: 4.5em;
     letter-spacing: -7px;
     font-weight: 700;
     text-transform: uppercase;
@@ -211,12 +203,11 @@ h1 {
             0px 0px 25px red,
             0px 0px 5px red,
             0px 0px 5px white,
-            0px 0px 150px #7B96B8,
             0px 10px 100px purple,
-            0px 10px 100px #7B96B8,
-            0px 10px 100px #7B96B8,
-            0px -10px 100px #7B96B8,
-            0px -10px 100px #7B96B8;
+            0px 10px 100px pink,
+            0px 10px 100px purple,
+            0px -10px 100px pink,
+            0px -10px 100px purple;
         transform: scale(1);
     }
     100% {
