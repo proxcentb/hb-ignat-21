@@ -72,14 +72,14 @@ function playVika() {
     };
     window.requestAnimationFrame = (function() {
       return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
-        return window.setTimeout(callback, 1000 / 30);
+        return window.setTimeout(callback, 1000 / 60);
       };
     })();
     Confetti = (function() {
       function Confetti() {
         this.style = COLORS[~~range(0, 6)];
         this.rgb = "rgba(" + this.style[0] + "," + this.style[1] + "," + this.style[2];
-        this.r = ~~range(3, 8);
+        this.r = ~~range(6, 10);
         this.r2 = 2 * this.r;
         this.replace();
       }
